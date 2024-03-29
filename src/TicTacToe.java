@@ -179,9 +179,10 @@ public class TicTacToe implements ActionListener {
         buttons[c].setBackground(Color.GREEN);
 
         for(int i = 0; i < 9 ;i++){
-            buttons[i].setEnabled(false);
-            textfield.setText("O Wins");
+            if(i!=a && i!=b && i!= c)
+                buttons[i].setEnabled(false);
         }
+        textfield.setText("O Wins");
 
     }
     
